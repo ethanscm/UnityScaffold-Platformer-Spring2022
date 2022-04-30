@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class TempMovement : MonoBehaviour
 {
     private Rigidbody2D body;
     private float moveSpeed = 10;
