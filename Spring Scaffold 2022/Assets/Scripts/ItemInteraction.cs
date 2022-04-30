@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class ItemInteraction : MonoBehaviour
 {
-    public Transform detectionPoint;
+    private Transform detectionPoint;
     private const float detectionRadius = 0.2f;
-    public LayerMask detectionLayer;
+    private LayerMask detectionLayer;
     private GameObject detectedObject;
     public List<GameObject> pickedItems = new List<GameObject>();
+
+    void Start()
+    {
+        detectionPoint = gameObject.transform;
+        detectionLayer = LayerMask.GetMask("Item");
+    }
 
     // Update is called once per frame
     void Update()
@@ -17,6 +23,7 @@ public class ItemInteraction : MonoBehaviour
         {
             if(InteractInput())
             {
+                Debug.Log("INTERACT");
                 detectedObject.GetComponent<Item>().Interact();
             }
         }
