@@ -8,18 +8,25 @@ public class ItemInteraction : MonoBehaviour
     private const float detectionRadius = 0.2f;
     private LayerMask detectionLayer;
     private GameObject detectedObject;
-    public List<GameObject> pickedItems = new List<GameObject>();
 
-    void Start()
+	[SerializeField] private InventoryUI inventoryUI;
+	private PlayerInventory inventory;
+
+
+	void Start()
     {
         detectionPoint = gameObject.transform;
         detectionLayer = LayerMask.GetMask("Item");
-    }
+		
+		inventory = new PlayerInventory();
+	}
 
-    // Update is called once per frame
+    
+	// Update is called once per frame
     void Update()
     {
-        if(DetectObject())
+        // Interact with item on ground using "e"
+		if(DetectObject() && !inventory.inventory_opened)
         {
             if(InteractInput())
             {
@@ -27,7 +34,22 @@ public class ItemInteraction : MonoBehaviour
                 detectedObject.GetComponent<Item>().Interact();
             }
         }
-    }
+
+		// Open/close inventory using "Tab"
+		if (Input.GetKeyDown(KeyCode.Tab))
+		{
+			if (!inventory.inventory_opened)
+			{
+				inventoryUI.SetInventory(inventory);
+				inventory.inventory_opened = true;
+			}
+			else
+            {
+				inventoryUI.CloseInventory();
+				inventory.inventory_opened = false;
+			}
+		}
+	}
 
     bool InteractInput()
     {
@@ -38,8 +60,8 @@ public class ItemInteraction : MonoBehaviour
     {
         Collider2D obj = Physics2D.OverlapCircle(detectionPoint.position, detectionRadius, detectionLayer);
 
-        if (obj == null)
-        {
+		if (obj == null)
+		{
             detectedObject = null;
             return false;
         }
@@ -50,8 +72,8 @@ public class ItemInteraction : MonoBehaviour
         }
     }
 
-    public void PickUpItem(GameObject item)
+	public void PickUpItem(GameObject item)
     {
-        pickedItems.Add(item);
-    }
+		inventory.AddItem(item);
+	}
 }

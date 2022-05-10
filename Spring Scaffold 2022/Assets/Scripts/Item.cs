@@ -4,19 +4,60 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    private void Reset()
+	public enum ItemType
+    {
+		// Materials
+		Stick,
+		String,
+		Rock,
+		Wood,
+
+		// Crafted items
+		Axe,
+		Slingshot
+	}
+
+	public ItemType type;
+	
+	public bool collected = false;
+	public bool used = false;
+
+	
+	private void Reset()
     {
         GetComponent<Collider2D>().isTrigger = true;
         gameObject.layer = 10;
+		
+		// Reset item properties to default
+		collected = false;
+		used = false;
     }
 
-
-    public void Interact()
+    
+	public void Interact()
     {
         Debug.Log("PICK UP");
         GameObject item = gameObject;
         FindObjectOfType<ItemInteraction>().PickUpItem(item);
         //Disable the obj
         gameObject.SetActive(false);
+    }
+
+
+	public Sprite GetSprite()
+    {
+		switch (type)
+        {
+			default:
+			// Materials
+			case ItemType.Stick:		return ItemAssets.Instance.stick_sprite;
+			case ItemType.String:		return ItemAssets.Instance.string_sprite;
+			case ItemType.Rock:			return ItemAssets.Instance.rock_sprite;
+			case ItemType.Wood: return ItemAssets.Instance.wood_sprite;
+			
+			// Crafted Items
+			case ItemType.Axe: return ItemAssets.Instance.axe_sprite;
+			case ItemType.Slingshot: return ItemAssets.Instance.slingshot_sprite;
+		}
     }
 }
