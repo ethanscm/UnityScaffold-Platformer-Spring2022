@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StoppingPlatform : MonoBehaviour
+public class StoppingPlatform : Switch
 {
     private float speed = 2;
     private int startingPoint = 0;
     public Transform[] points;
-    private bool switchON = true;
 
     private int i;
     void Start()
@@ -18,18 +17,20 @@ public class StoppingPlatform : MonoBehaviour
     
     void Update()
     {
-        if (switchON)
+        if (switchChange)
         {
-        if (Vector2.Distance(transform.position, points[i].position) < 0.02f)
-            {
-                i++;
-                if (i == points.Length)
+            if (Vector2.Distance(transform.position, points[i].position) < 0.02f)
                 {
-                    i = 0;
+                    i++;
+                    if (i == points.Length)
+                    {
+                        i = 0;
+                    }
                 }
-            }
 
-            transform.position = Vector2.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
         }
     }
+
+    
 }

@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovingPlatformVertical : MonoBehaviour
+public class MovingPlatform : Switch
 {
     private float speed = 2;
     private int startingPoint = 0;
     public Transform[] points;
-    private bool switchON = true;
 
     private int i;
     void Start()
