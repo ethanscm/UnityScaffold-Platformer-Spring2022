@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour {
     float horizontalMove = 0f;
     bool jump = false;
     public CharacterController2D controller;
+    //public Animator animator;
 
     void Start()
     {
@@ -22,9 +23,13 @@ public class PlayerMovement : MonoBehaviour {
     void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+
+        //animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
+            //animator.SetBool("IsJumping", true);
         }
     }
 

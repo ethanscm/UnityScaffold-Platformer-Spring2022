@@ -29,12 +29,12 @@ public class CharacterController2D : MonoBehaviour {
     private Vector3 m_Velocity = Vector3.zero;
 
     [HideInInspector] public Rigidbody2D m_RigidBody2D;
-    //private Animator animator; //If using animations
+    private Animator animator; //If using animations
 
     void Awake()
     {
         m_RigidBody2D = GetComponent<Rigidbody2D>();
-        //animator = GetComponent<Animator>(); //get animator component
+        animator = GetComponent<Animator>(); //get animator component
     }
 
     void FixedUpdate()
@@ -58,6 +58,12 @@ public class CharacterController2D : MonoBehaviour {
             Vector3 targetVelocity = new Vector2(move * 10f, m_RigidBody2D.velocity.y);
 
             m_RigidBody2D.velocity = Vector3.SmoothDamp(m_RigidBody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
+
+            if (m_Grounded) //if you are on the ground, then adjust Speed animator condition
+            {
+                animator.SetFloat("Speed", m_RigidBody2D.velocity.magnitude);
+            }
+            animator.SetBool("IsJumping", !m_Grounded); // adjust IsJumping animator condition
 
             if (move > 0 && !m_FacingRight)
                 Flip();
