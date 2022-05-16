@@ -8,8 +8,13 @@ TagManager:
   - Item
   - ItemContainer
   - CraftContainer
+<<<<<<< Updated upstream
   - Switch
   - Bush
+=======
+  - Checkpoint
+  - FallDetector
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
@@ -44,6 +49,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: background
+    uniqueID: 4208978783
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

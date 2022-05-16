@@ -9,9 +9,15 @@ public class TempMovement : MonoBehaviour
     private float jumpSpeed = 10;
     bool isJumping = false;
 
+    //for fall detection/respawn
+    private Vector3 respawnPoint;
+    public GameObject fallDetector;
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        //added for setting respawn at start
+        respawnPoint = transform.position;
     }
 
     void Update()
@@ -23,6 +29,9 @@ public class TempMovement : MonoBehaviour
             body.velocity = new Vector2(body.velocity.x, jumpSpeed);
             isJumping = true;
         }
+
+        //added for fall detection
+        fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -31,5 +40,15 @@ public class TempMovement : MonoBehaviour
         {
             isJumping = false;
         }
+    }
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+        //added for fall detetion/checkpoints
+        if (collision.tag == ("FallDetector"))
+            transform.position = respawnPoint;
+
+        if (collision.tag == ("Checkpoint"))
+            respawnPoint = transform.position;
     }
 }
