@@ -9,6 +9,7 @@ TagManager:
   - ItemContainer
   - CraftContainer
   - Switch
+  - Bush
   layers:
   - Default
   - TransparentFX
