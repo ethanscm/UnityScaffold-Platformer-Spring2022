@@ -19,9 +19,12 @@ public class Switch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (DetectObject() && InteractInput())
+        if (DetectObject())
         {
-            FindObjectOfType<Switch>().switchChange = true;
+            if (InteractInput())
+            {
+                detectedObject.GetComponent<GoSwitch>().Interact();
+            }
         }
     }
 

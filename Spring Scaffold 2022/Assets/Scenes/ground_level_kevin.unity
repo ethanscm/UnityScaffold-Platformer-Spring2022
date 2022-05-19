@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 96703598}
   - component: {fileID: 96703600}
   m_Layer: 6
-  m_Name: HorizontalSwitch
+  m_Name: StopSwitch
   m_TagString: Switch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7359,6 +7359,7 @@ GameObject:
   - component: {fileID: 457824421}
   - component: {fileID: 457824420}
   - component: {fileID: 457824423}
+  - component: {fileID: 457824426}
   m_Layer: 0
   m_Name: Player (1)
   m_TagString: Player
@@ -7503,6 +7504,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &457824426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457824419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b27bf63e467799c429fca5eb3a60a57e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &760617829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7809,7 +7822,7 @@ GameObject:
   - component: {fileID: 1033057458}
   - component: {fileID: 1033057459}
   m_Layer: 6
-  m_Name: VerticalSwitch
+  m_Name: GoSwitch
   m_TagString: Switch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7915,7 +7928,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1033057455}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b27bf63e467799c429fca5eb3a60a57e, type: 3}
+  m_Script: {fileID: 11500000, guid: 14bc1641867ec9d49a923980cbe056fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1071388274 stripped

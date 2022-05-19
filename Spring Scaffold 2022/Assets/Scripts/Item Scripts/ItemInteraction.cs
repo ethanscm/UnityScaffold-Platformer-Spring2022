@@ -68,6 +68,7 @@ public class ItemInteraction : MonoBehaviour
         else
         {
             detectedObject = obj.gameObject;
+            Debug.Log("TRUE");
             return true;
         }
     }

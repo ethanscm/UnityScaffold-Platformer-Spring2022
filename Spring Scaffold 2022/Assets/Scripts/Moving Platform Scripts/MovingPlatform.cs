@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovingPlatform : Switch
+public class MovingPlatform : MonoBehaviour
 {
     private float speed = 2;
     private int startingPoint = 0;
