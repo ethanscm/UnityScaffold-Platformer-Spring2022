@@ -7,7 +7,7 @@ public class fragilePlat : MonoBehaviour
     public GameObject platComp;
     public GameObject detector;
     private fragilePlatDetector detectScript;
-    private float despawnTimer = 1f;
+    private float despawnTimer = 0.25f;
     private float respawnTimer = 5f;
     private float currentTime = 0f;
     private bool respawning = false;
