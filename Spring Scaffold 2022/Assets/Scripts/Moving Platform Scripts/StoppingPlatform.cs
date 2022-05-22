@@ -17,7 +17,7 @@ public class StoppingPlatform : Switch
     
     void Update()
     {
-        if (switchChange)
+        if (switchChange == true)
         {
             if (Vector2.Distance(transform.position, points[i].position) < 0.02f)
                 {
