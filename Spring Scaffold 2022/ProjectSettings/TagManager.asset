@@ -8,8 +8,11 @@ TagManager:
   - Item
   - ItemContainer
   - CraftContainer
-  - Switch
   - Bush
+  - Checkpoint
+  - FallDetector
+  - StopSwitch
+  - GoSwitch
   layers:
   - Default
   - TransparentFX

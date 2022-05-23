@@ -139,9 +139,10 @@ GameObject:
   - component: {fileID: 96703599}
   - component: {fileID: 96703598}
   - component: {fileID: 96703600}
+  - component: {fileID: 96703601}
   m_Layer: 6
   m_Name: StopSwitch
-  m_TagString: Switch
+  m_TagString: StopSwitch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -237,6 +238,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
+--- !u!114 &96703601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96703597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b2ce3b40e1999644931022e3a421ef7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &101982259
 GameObject:
   m_ObjectHideFlags: 0
@@ -7516,6 +7529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b27bf63e467799c429fca5eb3a60a57e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  switchChange: 0
 --- !u!1001 &760617829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7537,7 +7551,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8550855893868302294, guid: 663842e78710ab54396d4310fa76c039, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8550855893868302294, guid: 663842e78710ab54396d4310fa76c039, type: 3}
       propertyPath: m_LocalScale.x
@@ -7823,7 +7837,7 @@ GameObject:
   - component: {fileID: 1033057459}
   m_Layer: 6
   m_Name: GoSwitch
-  m_TagString: Switch
+  m_TagString: GoSwitch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8167,7 +8181,7 @@ Transform:
   m_LocalScale: {x: 3.7939782, y: -0.5421576, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1262067613
 GameObject:
@@ -8506,7 +8520,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7306549609503908259, guid: 82c94aeab6155444fb44fa2d0a485878, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7306549609503908259, guid: 82c94aeab6155444fb44fa2d0a485878, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8564,7 +8578,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8550855893868302294, guid: 663842e78710ab54396d4310fa76c039, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8550855893868302294, guid: 663842e78710ab54396d4310fa76c039, type: 3}
       propertyPath: m_LocalPosition.x

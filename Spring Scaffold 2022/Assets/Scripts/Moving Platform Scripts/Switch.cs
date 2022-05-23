@@ -8,7 +8,7 @@ public class Switch : MonoBehaviour
     private const float detectionRadius = 0.2f;
     private LayerMask detectionLayer;
     private GameObject detectedObject;
-    protected bool switchChange = false;
+    public bool switchChange = false;
 
     void Start()
     {
@@ -23,7 +23,14 @@ public class Switch : MonoBehaviour
         {
             if (InteractInput())
             {
-                detectedObject.GetComponent<GoSwitch>().Interact();
+                if (detectedObject.tag == "GoSwitch")
+                {
+                    detectedObject.GetComponent<GoSwitch>().Interact();
+                }
+                else if (detectedObject.tag == "StopSwitch")
+                {
+                    detectedObject.GetComponent<StopSwitch>().Interact();
+                }
             }
         }
     }
