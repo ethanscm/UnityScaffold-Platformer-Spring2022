@@ -61,7 +61,7 @@ public class CharacterController2D : MonoBehaviour {
 
             if (m_Grounded) //if you are on the ground, then adjust Speed animator condition
             {
-                animator.SetFloat("Speed", m_RigidBody2D.velocity.magnitude);
+                animator.SetFloat("Speed", Mathf.Abs(m_RigidBody2D.velocity.x));
             }
             animator.SetBool("IsJumping", !m_Grounded); // adjust IsJumping animator condition
 

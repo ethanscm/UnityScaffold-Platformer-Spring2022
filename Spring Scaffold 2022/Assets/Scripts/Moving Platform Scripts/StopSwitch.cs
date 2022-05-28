@@ -8,6 +8,9 @@ public class StopSwitch : MonoBehaviour
     {
         Debug.Log("STOP");
         GameObject item = gameObject;
-        FindObjectOfType<Switch>().switchChange = false;
+        foreach (Switch s in FindObjectsOfType<Switch>())
+        {
+            s.switchChange = false;
+        }
     }
 }

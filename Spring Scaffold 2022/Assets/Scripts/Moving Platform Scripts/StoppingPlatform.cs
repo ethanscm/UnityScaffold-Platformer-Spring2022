@@ -22,9 +22,11 @@ public class StoppingPlatform : Switch
             if (Vector2.Distance(transform.position, points[i].position) < 0.02f)
                 {
                     i++;
+                    Debug.Log("Heading to 1");
                     if (i == points.Length)
                     {
                         i = 0;
+                        Debug.Log("Heading to 0");
                     }
                 }
 

@@ -8,6 +8,9 @@ public class GoSwitch : MonoBehaviour
     {
         Debug.Log("GO");
         GameObject item = gameObject;
-        FindObjectOfType<Switch>().switchChange = true;
+        foreach (Switch s in FindObjectsOfType<Switch>())
+        {
+            s.switchChange = true;
+        }
     }
 }

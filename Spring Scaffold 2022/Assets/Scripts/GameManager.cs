@@ -23,15 +23,15 @@ public class GameManager : MonoBehaviour {
     }
 
     //Moves the player to the SpawnPosition
-    public void GameOver()
+    public void GameOver(float n)
     {
-        StartCoroutine(RestartGame());
+        StartCoroutine(RestartGame(n));
     }
 
-    //Restarts Players health and position with a .1 second delay
-    IEnumerator RestartGame()
+    //Restarts Players health and position with a given delay
+    IEnumerator RestartGame(float n)
     {
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(n);
         player.transform.position = SpawnPosition.position;
     }
 }
