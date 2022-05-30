@@ -11,6 +11,7 @@ public class Respawner : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
+            Debug.Log("GAME OVER");
             gameManager.GameOver(delay);
         }
     }
