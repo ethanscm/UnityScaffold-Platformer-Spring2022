@@ -23,7 +23,7 @@ public class FallingSpike : MonoBehaviour
     {
         if (col.gameObject.name.Equals ("Player"))
         {
-            Debug.Log("Falling");
+            Debug.Log("GAME OVER!");
         }
     }
 }
