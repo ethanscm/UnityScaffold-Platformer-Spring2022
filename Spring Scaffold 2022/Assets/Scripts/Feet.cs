@@ -16,7 +16,6 @@ public class Feet : MonoBehaviour
     {
         if (other.gameObject.CompareTag("LeafPlatform"))
         {
-            playerMvt.jump = false;
             player.transform.parent = other.gameObject.transform;
         }
     }

@@ -2,22 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChopDetector : MonoBehaviour
+public class LadderDetector : MonoBehaviour
 {
     private Transform detectionPoint;
     private const float detectionRadius = 0.2f;
     private LayerMask detectionLayer;
     private GameObject detectedObject;
-    private bool chopped;
-    [SerializeField] private GameObject ctm;
+    private bool built;
+    [SerializeField] private GameObject ladder;
     [SerializeField] private GameObject helper;
+    [SerializeField] private GameObject detector;
 
 	void Start()
     {
         detectionPoint = gameObject.transform;
-        detectionLayer = LayerMask.GetMask("Chop");
+        detectionLayer = LayerMask.GetMask("Ladder");
         helper.SetActive(false);
-        chopped = false;
+        ladder.SetActive(false);
+        built = false;
 	}
 
     void Update()
@@ -27,9 +29,13 @@ public class ChopDetector : MonoBehaviour
         {
             if(InteractInput())
             {
-                ctm.GetComponent<ChopTreeManager>().chopDownTree();
                 helper.SetActive(false);
-                chopped = true;
+                ladder.SetActive(true);
+                if (built)
+                {
+                    Debug.Log("NextLevel");
+                }
+                built = true;
             }
         }
 	}
@@ -52,7 +58,7 @@ public class ChopDetector : MonoBehaviour
         else
         {
             detectedObject = obj.gameObject;
-            if (!chopped)
+            if (!built)
             {
                 helper.SetActive(true);
             }

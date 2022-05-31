@@ -5,7 +5,7 @@ using UnityEngine;
 public class ItemInteraction : MonoBehaviour
 {
     private Transform detectionPoint;
-    private const float detectionRadius = 0.2f;
+    private const float detectionRadius = 0.5f;
     private LayerMask detectionLayer;
     private GameObject detectedObject;
 
@@ -30,7 +30,6 @@ public class ItemInteraction : MonoBehaviour
         {
             if(InteractInput())
             {
-                Debug.Log("INTERACT");
                 detectedObject.GetComponent<Item>().Interact();
             }
         }
@@ -68,7 +67,6 @@ public class ItemInteraction : MonoBehaviour
         else
         {
             detectedObject = obj.gameObject;
-            Debug.Log("TRUE");
             return true;
         }
     }
