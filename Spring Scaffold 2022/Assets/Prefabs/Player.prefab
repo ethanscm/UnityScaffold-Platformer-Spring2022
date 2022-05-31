@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 1827974088080324245}
   - component: {fileID: 1827974088080324244}
   - component: {fileID: 1827974088080324243}
+  - component: {fileID: 4906930897109296382}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -202,6 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 30
+  jump: 0
   controller: {fileID: 0}
 --- !u!95 &1827974088080324244
 Animator:
@@ -235,6 +237,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bushPuzzleManager: {fileID: 0}
+--- !u!114 &4906930897109296382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827974088080324242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10886dda1224d0b43ba1c6e105f71408, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ctm: {fileID: 0}
 --- !u!1 &1827974089555405652
 GameObject:
   m_ObjectHideFlags: 0
