@@ -8763,6 +8763,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7203be403be3d18409e770868435d590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 953200090}
+  delay: 0.1
 --- !u!61 &2080742375
 BoxCollider2D:
   m_ObjectHideFlags: 0
