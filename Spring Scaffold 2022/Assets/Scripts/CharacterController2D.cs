@@ -79,6 +79,10 @@ public class CharacterController2D : MonoBehaviour {
         {
             m_Grounded = false;
             m_RigidBody2D.AddForce(new Vector2(m_RigidBody2D.velocity.x, m_JumpForce));
+            if (m_RigidBody2D.velocity.y < -1)
+            {
+                m_RigidBody2D.AddForce(new Vector2(0f, m_JumpForce/3));
+            }
         }
 
         //Air Jump
