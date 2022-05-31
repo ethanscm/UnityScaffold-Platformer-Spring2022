@@ -9,6 +9,7 @@ public class ChopDetector : MonoBehaviour
     private LayerMask detectionLayer;
     private GameObject detectedObject;
     private bool chopped;
+    ItemInteraction inv;
     [SerializeField] private GameObject ctm;
     [SerializeField] private GameObject helper;
 
@@ -18,6 +19,7 @@ public class ChopDetector : MonoBehaviour
         detectionLayer = LayerMask.GetMask("Chop");
         helper.SetActive(false);
         chopped = false;
+        inv = GetComponent<ItemInteraction>();
 	}
 
     void Update()
@@ -27,9 +29,12 @@ public class ChopDetector : MonoBehaviour
         {
             if(InteractInput())
             {
-                ctm.GetComponent<ChopTreeManager>().chopDownTree();
-                helper.SetActive(false);
-                chopped = true;
+                if(inv.hasItem(Item.ItemType.Axe))
+                {
+                    ctm.GetComponent<ChopTreeManager>().chopDownTree();
+                    helper.SetActive(false);
+                    chopped = true;
+                }
             }
         }
 	}
@@ -52,7 +57,7 @@ public class ChopDetector : MonoBehaviour
         else
         {
             detectedObject = obj.gameObject;
-            if (!chopped)
+            if (!chopped)//inv.hasItem(Item.ItemType.Axe))
             {
                 helper.SetActive(true);
             }

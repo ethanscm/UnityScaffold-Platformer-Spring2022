@@ -110,4 +110,9 @@ public class ItemInteraction : MonoBehaviour
 		inventory.CraftItem(item);
 		inventoryUI.UpdateInventory();
 	}
+
+	public bool hasItem(Item.ItemType item_type)
+	{
+		return inventory.FindItem(item_type);
+	}
 }

@@ -365,7 +365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df5655dc4777455459329ff30b38449b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
+  type: 2
 --- !u!212 &19634417
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -635,7 +635,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7306549609503908259, guid: 82c94aeab6155444fb44fa2d0a485878, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 230.119
       objectReference: {fileID: 0}
     - target: {fileID: 7306549609503908259, guid: 82c94aeab6155444fb44fa2d0a485878, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1108,7 +1108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df5655dc4777455459329ff30b38449b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  type: 1
 --- !u!212 &532099184
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1225,7 +1225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1767273015334421172, guid: 879cb3d8696d088479f0292faa8ba37f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.4
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1767273015334421172, guid: 879cb3d8696d088479f0292faa8ba37f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1249,7 +1249,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1767273015977632848, guid: 879cb3d8696d088479f0292faa8ba37f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 230.119
       objectReference: {fileID: 0}
     - target: {fileID: 1767273015977632848, guid: 879cb3d8696d088479f0292faa8ba37f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1369,7 +1369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df5655dc4777455459329ff30b38449b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 2
+  type: 3
 --- !u!212 &588510932
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11309,7 +11309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df5655dc4777455459329ff30b38449b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 3
+  type: 4
 --- !u!212 &1922680317
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11964,6 +11964,14 @@ PrefabInstance:
     - target: {fileID: 4854962096969726214, guid: e8e28e831f958524cadc70124a142040, type: 3}
       propertyPath: m_Offset.y
       value: 0.010200962
+      objectReference: {fileID: 0}
+    - target: {fileID: 4854962096969726214, guid: e8e28e831f958524cadc70124a142040, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4854962096969726214, guid: e8e28e831f958524cadc70124a142040, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.32
       objectReference: {fileID: 0}
     - target: {fileID: 4854962096969726214, guid: e8e28e831f958524cadc70124a142040, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
