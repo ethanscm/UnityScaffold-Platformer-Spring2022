@@ -5,6 +5,8 @@ using UnityEngine;
 public class FallingSpike : MonoBehaviour
 {
     Rigidbody2D rb;
+    public GameManager gameManager;
+    [SerializeField] public float delay;
 
     void Start()
     {
@@ -23,7 +25,8 @@ public class FallingSpike : MonoBehaviour
     {
         if (col.gameObject.name.Equals ("Player"))
         {
-            Debug.Log("GAME OVER!");
+            Debug.Log("RESPAWN!");
+            gameManager.GameOver(delay);
         }
     }
 }
