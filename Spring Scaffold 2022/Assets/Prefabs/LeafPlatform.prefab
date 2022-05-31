@@ -222,7 +222,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detector: {fileID: 4726897002639348888}
   m_RigidBody2D: {fileID: 0}
-  StartingHeight: 0
 --- !u!50 &4726897002674060904
 Rigidbody2D:
   serializedVersion: 4
@@ -351,7 +350,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3012639, y: 0.04598441}
+  m_Size: {x: 0.3315425, y: 0.04598441}
   m_EdgeRadius: 0
 --- !u!1 &4726897002979933735
 GameObject:
