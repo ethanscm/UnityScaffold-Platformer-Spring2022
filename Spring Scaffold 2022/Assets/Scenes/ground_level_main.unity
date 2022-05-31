@@ -198,7 +198,7 @@ Transform:
   - {fileID: 1946735463}
   - {fileID: 639725887}
   m_Father: {fileID: 909390655}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &18972329
 PrefabInstance:
@@ -429,7 +429,7 @@ GameObject:
   - component: {fileID: 77668846}
   - component: {fileID: 77668845}
   m_Layer: 7
-  m_Name: PlatformStationary 3
+  m_Name: StaticPlatform
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -447,7 +447,7 @@ Transform:
   m_LocalScale: {x: 3.4346886, y: 3.4007337, z: 1}
   m_Children: []
   m_Father: {fileID: 909390655}
-  m_RootOrder: 15
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &77668845
 BoxCollider2D:
@@ -1670,7 +1670,7 @@ Transform:
   m_LocalScale: {x: 18.252565, y: 34.078247, z: 1}
   m_Children: []
   m_Father: {fileID: 909390655}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &689126940
 BoxCollider2D:
@@ -6623,10 +6623,10 @@ Transform:
   - {fileID: 1894010272}
   - {fileID: 211931443}
   - {fileID: 386464895}
-  - {fileID: 77668844}
   - {fileID: 923852620}
   - {fileID: 689126939}
   - {fileID: 9867458}
+  - {fileID: 77668844}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

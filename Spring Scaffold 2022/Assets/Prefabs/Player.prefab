@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1827974088080324234}
   - component: {fileID: 1827974088080324233}
   - component: {fileID: 1827974088080324232}
-  - component: {fileID: 1827974088080324247}
   - component: {fileID: 1827974088080324246}
   - component: {fileID: 1827974088080324245}
   - component: {fileID: 1827974088080324244}
@@ -153,18 +152,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1827974088080324247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1827974088080324242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c8064fa174dcd1469d20e0623b3fb6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1827974088080324246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,6 +174,7 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 1827974089555405653}
   m_AirControl: 1
   m_JumpForceOnEnemies: 20
+  m_Grounded: 0
   m_FacingRight: 1
   m_Damaged: 0
   m_Immune: 0
@@ -204,7 +192,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 30
-  jump: 0
   controller: {fileID: 0}
 --- !u!95 &1827974088080324244
 Animator:
@@ -251,6 +238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ctm: {fileID: 0}
+  helper: {fileID: 0}
 --- !u!114 &8389397194594516139
 MonoBehaviour:
   m_ObjectHideFlags: 0

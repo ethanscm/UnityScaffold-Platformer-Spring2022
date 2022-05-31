@@ -8,12 +8,13 @@ public class LeafPlatform : MonoBehaviour
     public GameObject detector;
     private LeafPlatformDetector detectScript;
     [HideInInspector] public Rigidbody2D m_RigidBody2D;
-    public float StartingHeight;
+    private float StartingHeight;
 
     void Start()
     {
         detectScript = detector.GetComponent<LeafPlatformDetector>();
         m_RigidBody2D = GetComponent<Rigidbody2D>();
+        StartingHeight = transform.position.y;
     }
 
     void Update()
@@ -25,7 +26,7 @@ public class LeafPlatform : MonoBehaviour
     {
         if(detectScript.stepped)
         {
-            m_RigidBody2D.velocity = new Vector2(0, -5);
+            m_RigidBody2D.velocity = new Vector2(0, -4);
         }
         else
         {
@@ -35,7 +36,7 @@ public class LeafPlatform : MonoBehaviour
             }
             else
             {
-                m_RigidBody2D.velocity = new Vector2(0, 0.5f);
+                m_RigidBody2D.velocity = new Vector2(0, 1);
             }
             
         }
