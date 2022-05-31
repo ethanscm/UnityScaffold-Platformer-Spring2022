@@ -6,6 +6,8 @@ public class Item : MonoBehaviour
 {
 	public enum ItemType
     {
+		Default,
+
 		// Materials
 		Stick,
 		String,
@@ -18,30 +20,50 @@ public class Item : MonoBehaviour
 	}
 
 	public ItemType type;
-	
-	public bool collected = false;
-	public bool used = false;
 
 	
 	private void Reset()
     {
         GetComponent<Collider2D>().isTrigger = true;
         gameObject.layer = 10;
-		
-		// Reset item properties to default
-		collected = false;
-		used = false;
     }
 
     
 	public void Interact()
     {
-        Debug.Log("PICK UP");
+        //Debug.Log("PICK UP");
         GameObject item = gameObject;
         FindObjectOfType<ItemInteraction>().PickUpItem(item);
         //Disable the obj
         gameObject.SetActive(false);
     }
+
+
+
+	// Removes an item from the inventory
+	public void Remove(int position, bool crafting)
+	{
+		if (type != ItemType.Default)
+		{
+			//Debug.Log("REMOVE");
+			FindObjectOfType<ItemInteraction>().RemoveFromInventory(position, crafting);
+		}
+	}
+
+
+	// Moves an item from the inventory to the crafting menu
+	public bool Move(int position, int container_type)
+	{
+		//Debug.Log("MOVE");
+		return FindObjectOfType<ItemInteraction>().MoveCrafting(position, container_type);
+	}
+
+
+	public void Craft()
+	{
+		//Debug.Log("CRAFT");
+		FindObjectOfType<ItemInteraction>().Crafting(this);
+	}
 
 
 	public Sprite GetSprite()
@@ -50,9 +72,9 @@ public class Item : MonoBehaviour
         {
 			default:
 			// Materials
-			case ItemType.Stick:		return ItemAssets.Instance.stick_sprite;
-			case ItemType.String:		return ItemAssets.Instance.string_sprite;
-			case ItemType.Rock:			return ItemAssets.Instance.rock_sprite;
+			case ItemType.Stick: return ItemAssets.Instance.stick_sprite;
+			case ItemType.String: return ItemAssets.Instance.string_sprite;
+			case ItemType.Rock:	return ItemAssets.Instance.rock_sprite;
 			case ItemType.Wood: return ItemAssets.Instance.wood_sprite;
 			
 			// Crafted Items

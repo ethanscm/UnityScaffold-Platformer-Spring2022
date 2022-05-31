@@ -39,8 +39,14 @@ public class ItemInteraction : MonoBehaviour
 		{
 			if (!inventory.inventory_opened)
 			{
-				inventoryUI.SetInventory(inventory);
+				inventoryUI.OpenInventory(inventory);
 				inventory.inventory_opened = true;
+			}
+			else if(inventory.inventory_opened && inventory.recipes_opened)
+            {
+				inventoryUI.CloseRecipes(); 
+				inventoryUI.OpenInventory(inventory);
+				inventory.recipes_opened = false;
 			}
 			else
             {
@@ -74,5 +80,34 @@ public class ItemInteraction : MonoBehaviour
 	public void PickUpItem(GameObject item)
     {
 		inventory.AddItem(item);
+	}
+
+
+	public void RemoveFromInventory(int position, bool crafting)
+	{
+		if (crafting)
+			inventory.RemoveCraftingItem(position);
+		else
+			inventory.RemoveItem(position);
+		
+		inventoryUI.UpdateInventory();
+	}
+
+
+	public bool MoveCrafting(int position, int container_type)
+	{
+		if (container_type == 0)
+			return inventory.AddCraftingItem(position);
+		else if (container_type == 1 || container_type == 2)
+			inventory.ReturnCraftingItem(position);
+
+		return true;
+	}
+
+
+	public void Crafting(Item item)
+    {
+		inventory.CraftItem(item);
+		inventoryUI.UpdateInventory();
 	}
 }

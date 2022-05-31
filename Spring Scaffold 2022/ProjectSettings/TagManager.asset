@@ -15,6 +15,7 @@ TagManager:
   - GoSwitch
   - LeafPlatform
   - Enemy
+  - RecipePage
   layers:
   - Default
   - TransparentFX
