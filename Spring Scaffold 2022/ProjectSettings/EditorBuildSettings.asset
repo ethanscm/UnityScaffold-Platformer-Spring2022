@@ -5,7 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: Assets/Scenes/acorn_pickup.unity
+    guid: 1ef7f393583e45549b0650a0626acc49
+  - enabled: 0
+    path: Assets/Scenes/ground_level_kevin.unity
+    guid: 2e3e3d71f3af5ed4db4e420e3666ceb5
+  - enabled: 0
+    path: Assets/Scenes/ground_level_megan.unity
+    guid: e3cd9dceb497d409bb8e5036ad69827e
+  - enabled: 0
+    path: Assets/Scenes/ground_level_ethan.unity
+    guid: 5f290304f37fb8040acf7308966fed95
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/ground_level_main.unity
+    guid: 84365acc2243627439d4b5638b7b8378
+  - enabled: 1
+    path: Assets/Scenes/branch_level_one_main.unity
+    guid: 5c25e6f0e712cbd4db368e16065d710b
   m_configObjects: {}

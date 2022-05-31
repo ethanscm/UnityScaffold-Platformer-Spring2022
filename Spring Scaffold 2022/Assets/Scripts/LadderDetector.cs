@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class LadderDetector : MonoBehaviour
 {
@@ -34,6 +36,7 @@ public class LadderDetector : MonoBehaviour
                 if (built)
                 {
                     Debug.Log("NextLevel");
+                    SceneManager.LoadScene(1);
                 }
                 built = true;
             }
