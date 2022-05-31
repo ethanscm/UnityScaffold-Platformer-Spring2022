@@ -13,6 +13,7 @@ TagManager:
   - FallDetector
   - StopSwitch
   - GoSwitch
+  - LeafPlatform
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - Ground
   - Bush
   - Quicksand
-  - 
+  - Platform
   - 
   - 
   - 
