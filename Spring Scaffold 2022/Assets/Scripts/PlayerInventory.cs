@@ -129,7 +129,7 @@ public class PlayerInventory
 		{
 			if (inventory_data[i] == null)
 			{
-				continue;
+				break;
 			}
 			if (inventory_data[i].type == item_type)
 			{

@@ -6,8 +6,10 @@ public class DetectRockThrow : MonoBehaviour
 {
     [SerializeField] private GameObject indicator;
     [SerializeField] private GameObject rock;
+    [SerializeField] private GameObject player;
     private bool playerIn;
     private bool thrown;
+    private ItemInteraction inv;
 
     void Start()
     {
@@ -15,13 +17,14 @@ public class DetectRockThrow : MonoBehaviour
         indicator.SetActive(false);
         rock.SetActive(false);
         thrown = false;
+        inv = player.GetComponent<ItemInteraction>();
     }
 
     void Update()
     {
         if (playerIn && !thrown)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && inv.hasItem(Item.ItemType.Slingshot) && inv.hasItem(Item.ItemType.Rock))
             {
                 rock.SetActive(true);
             }
@@ -33,8 +36,11 @@ public class DetectRockThrow : MonoBehaviour
         if (other.tag == "Player")
         {
             playerIn = true;
+            if (inv.hasItem(Item.ItemType.Slingshot) && inv.hasItem(Item.ItemType.Rock))
+            {
+                indicator.SetActive(true);
+            }
         }
-        indicator.SetActive(true);
     }
 
     void OnTriggerExit2D(Collider2D other)
