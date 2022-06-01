@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RockThrowInteraction : MonoBehaviour
+public class OtherRockThrow : MonoBehaviour
 {
     private Transform detectionPoint;
     private const float detectionRadius = 0.5f;

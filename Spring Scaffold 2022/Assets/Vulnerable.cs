@@ -6,9 +6,11 @@ public class Vulnerable : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Weapon")
+        Debug.Log("detected");
+        if(other.gameObject.tag == "Rock")
         {
-            
+            Debug.Log("HitBird");
+            gameObject.SetActive(false);
         }
     }
 }
