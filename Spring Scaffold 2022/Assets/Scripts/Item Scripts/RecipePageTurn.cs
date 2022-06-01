@@ -11,6 +11,7 @@ public class RecipePageTurn : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 	private GameObject obj_active;
 
 	[SerializeField] private RecipeBook recipe_book;
+	[SerializeField] private InventoryAudioManager audioManager;
 
 
 	void Start()
@@ -41,6 +42,7 @@ public class RecipePageTurn : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 		{
 			//Debug.Log(arrow_type + "ARROW clicked!");
 			TurnPage();
+			audioManager.Play("TurnPage");
 		}
 	}
 

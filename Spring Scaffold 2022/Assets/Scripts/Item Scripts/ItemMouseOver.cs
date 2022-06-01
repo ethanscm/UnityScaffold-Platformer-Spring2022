@@ -14,6 +14,7 @@ public class ItemMouseOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
 	
 	[SerializeField] private InventoryUI inventoryUI;
+	[SerializeField] private InventoryAudioManager audioManager;
 
 	private ItemRecipes item_recipes;
 	private GameObject[] craft_containers; 
@@ -132,7 +133,11 @@ public class ItemMouseOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 				Item crafted_item = crafted_obj.GetComponent<Item>();
 				crafted_item.type = recipe_type;
 				crafted_item.Craft();
+
+				audioManager.Play("CraftItem");
 			}
+			else
+				audioManager.Play("InvalidAction");
 		}
 	}
 
