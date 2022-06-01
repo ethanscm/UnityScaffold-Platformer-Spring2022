@@ -127,6 +127,10 @@ public class PlayerInventory
     {
 		for (int i = 0; i < 10; i++)
 		{
+			if (inventory_data[i] == null)
+			{
+				continue;
+			}
 			if (inventory_data[i].type == item_type)
 			{
 				return true;

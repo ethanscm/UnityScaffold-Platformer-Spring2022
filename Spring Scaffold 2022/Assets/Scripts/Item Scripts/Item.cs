@@ -16,6 +16,7 @@ public class Item : MonoBehaviour
 
 		// Crafted items
 		Axe,
+		Ladder,
 		Slingshot
 	}
 
