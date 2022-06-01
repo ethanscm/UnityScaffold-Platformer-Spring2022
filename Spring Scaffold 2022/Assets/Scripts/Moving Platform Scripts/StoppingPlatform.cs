@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StoppingPlatform : Switch
 {
-    private float speed = 2;
+    [SerializeField] private float speed = 2;
     private int startingPoint = 0;
     public Transform[] points;
 

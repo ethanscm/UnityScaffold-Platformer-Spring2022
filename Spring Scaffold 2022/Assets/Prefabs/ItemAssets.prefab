@@ -43,9 +43,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6a4a0a88aa52d04da6845ebbdcc3c8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sap_sprite: {fileID: 21300000, guid: c0ac2a7ca5e8b16428f89e7b4b19ba24, type: 3}
   stick_sprite: {fileID: 21300000, guid: 26a660cd425f1f74fba46f3a065bb74f, type: 3}
   string_sprite: {fileID: 21300000, guid: 2cce3fedd29210d45b4710e0cde69365, type: 3}
   rock_sprite: {fileID: 21300000, guid: b6cf3f4b61c334d4292451487fb53963, type: 3}
   wood_sprite: {fileID: 21300000, guid: dce6fb2f15ed0014b8ba86d0f2c83bb2, type: 3}
   axe_sprite: {fileID: 21300000, guid: 6d997dfe5ebd33f4d9787865726ca23c, type: 3}
+  glue_sprite: {fileID: 21300000, guid: d7bd40377a39fd1418a534c8f82f4978, type: 3}
+  ladder_sprite: {fileID: 21300000, guid: efc8027cebf9fe04db7b0c140ded8da2, type: 3}
   slingshot_sprite: {fileID: 21300000, guid: 40e926c01ea118c4daca21e656c94a24, type: 3}

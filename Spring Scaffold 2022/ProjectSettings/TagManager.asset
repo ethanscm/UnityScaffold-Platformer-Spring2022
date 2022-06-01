@@ -16,6 +16,7 @@ TagManager:
   - LeafPlatform
   - Enemy
   - RecipePage
+  - Rock
   layers:
   - Default
   - TransparentFX
@@ -31,7 +32,7 @@ TagManager:
   - Chop
   - Ladder
   - GlueWood
-  - 
+  - RockThrow
   - 
   - 
   - 

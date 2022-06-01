@@ -7,6 +7,7 @@ public class DetectRockThrow : MonoBehaviour
     [SerializeField] private GameObject indicator;
     [SerializeField] private GameObject rock;
     [SerializeField] private GameObject player;
+    [SerializeField] private GameObject acorn;
     private bool playerIn;
     private bool thrown;
     private ItemInteraction inv;
@@ -18,6 +19,7 @@ public class DetectRockThrow : MonoBehaviour
         rock.SetActive(false);
         thrown = false;
         inv = player.GetComponent<ItemInteraction>();
+        acorn.SetActive(false);
     }
 
     void Update()

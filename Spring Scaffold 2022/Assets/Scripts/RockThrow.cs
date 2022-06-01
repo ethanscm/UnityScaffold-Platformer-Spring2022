@@ -6,6 +6,7 @@ public class RockThrow : MonoBehaviour
 {
     [SerializeField] private GameObject target;
     [SerializeField] private GameObject detector;
+    [SerializeField] private GameObject acorn;
 
     void Update()
     {
@@ -14,6 +15,7 @@ public class RockThrow : MonoBehaviour
         {
             target.SetActive(false);
             detector.SetActive(false);
+            acorn.SetActive(true);
             gameObject.SetActive(false);
         }
     }

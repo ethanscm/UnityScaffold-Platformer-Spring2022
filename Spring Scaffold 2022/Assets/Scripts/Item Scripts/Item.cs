@@ -9,6 +9,7 @@ public class Item : MonoBehaviour
 		Default,
 
 		// Materials
+		Sap,
 		Stick,
 		String,
 		Rock,
@@ -16,6 +17,7 @@ public class Item : MonoBehaviour
 
 		// Crafted items
 		Axe,
+		Glue,
 		Ladder,
 		Slingshot
 	}
@@ -73,6 +75,7 @@ public class Item : MonoBehaviour
         {
 			default:
 			// Materials
+			case ItemType.Sap: return ItemAssets.Instance.sap_sprite;
 			case ItemType.Stick: return ItemAssets.Instance.stick_sprite;
 			case ItemType.String: return ItemAssets.Instance.string_sprite;
 			case ItemType.Rock:	return ItemAssets.Instance.rock_sprite;
@@ -80,6 +83,8 @@ public class Item : MonoBehaviour
 			
 			// Crafted Items
 			case ItemType.Axe: return ItemAssets.Instance.axe_sprite;
+			case ItemType.Glue: return ItemAssets.Instance.glue_sprite;
+			case ItemType.Ladder: return ItemAssets.Instance.ladder_sprite;
 			case ItemType.Slingshot: return ItemAssets.Instance.slingshot_sprite;
 		}
     }
