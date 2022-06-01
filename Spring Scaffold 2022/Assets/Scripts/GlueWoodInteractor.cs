@@ -28,8 +28,9 @@ public class GlueWoodInteractor : MonoBehaviour
     {
         if(DetectObject())
         {
-            if(InteractInput())
+            if(gameObject.GetComponent<ItemInteraction>().hasItem(Item.ItemType.Glue) && InteractInput())
             {
+                detector.SetActive(false);
                 indicator.SetActive(false);
                 wood.SetActive(true);
                 built = true;
@@ -55,7 +56,7 @@ public class GlueWoodInteractor : MonoBehaviour
         else
         {
             detectedObject = obj.gameObject;
-            if (!built)
+            if (!built && gameObject.GetComponent<ItemInteraction>().hasItem(Item.ItemType.Glue))
             {
                 indicator.SetActive(true);
             }

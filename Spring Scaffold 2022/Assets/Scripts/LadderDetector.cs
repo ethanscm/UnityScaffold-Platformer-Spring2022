@@ -31,7 +31,7 @@ public class LadderDetector : MonoBehaviour
         // Interact with tree using "e"
 		if(DetectObject())
         {
-            if(InteractInput())
+            if(InteractInput() && inv.hasItem(Item.ItemType.Ladder))
             {
                 helper.SetActive(false);
                 ladder.SetActive(true);
