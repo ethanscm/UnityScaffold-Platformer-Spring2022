@@ -8,8 +8,8 @@ public class WoodPecker : MonoBehaviour
 {
     //reference to Waypoints
     public List<Transform> points;
-    public int nextID = 0;
-    private int idChangeValue = 1;
+    //public int nextID = 0;
+    //private int idChangeValue = 1;
     public float speed = 2;
 
 
@@ -62,34 +62,13 @@ public class WoodPecker : MonoBehaviour
 
     public void MoveToNextPoint()
 	{
-        Transform goalPoint = points[nextID];
+        Transform goalPoint = points[0];
 
-        if (goalPoint.transform.position.x > transform.position.x)
-        {
-            //transform.localScale = new Vector3(-1, 1, 1);
-            transform.localScale = new Vector3(-5, 5, 5);
-        }
-        else
-        {
-            //transform.localScale = new Vector3(1, 1, 1);
-            transform.localScale = new Vector3(5, 5, 5);
-
-        }
 
         transform.position = Vector2.MoveTowards(transform.position, goalPoint.position, speed*Time.deltaTime );
         if (Vector2.Distance(transform.position, goalPoint.position) < 1f)
         {
-            if (nextID == points.Count - 1)
-            {
-                idChangeValue = -1;
-            }
-
-            if (nextID == 0)
-			{
-                idChangeValue = 1;
-			}
-
-            nextID += idChangeValue;
+			transform.position = points[1].position;
         }
     }
 
