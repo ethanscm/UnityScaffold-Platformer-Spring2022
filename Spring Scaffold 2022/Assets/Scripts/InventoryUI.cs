@@ -7,23 +7,35 @@ public class InventoryUI : MonoBehaviour
 {
 	private PlayerInventory inventory;
 
+	// the inventory's UI, starts out inactive, activates when Tab is pressed
 	private GameObject ui;
+
+	// an array containing all the item slots of the inventory's ui
 	private GameObject[] item_containers;
+
+	// an array containing all the crafting slots of the inventory's ui
 	private GameObject[] craft_containers;
 	private GameObject craft_button;
+	
+	private GameObject recipe_button;
+	[SerializeField] private RecipeBook recipe_book;
 
 
 	private void Awake()
     {
-		ui = this.gameObject;
 		item_containers = GameObject.FindGameObjectsWithTag("ItemContainer");
+		
 		craft_containers = GameObject.FindGameObjectsWithTag("CraftContainer");
 		craft_button = GameObject.Find("CraftButton");
+		recipe_button = GameObject.Find("Recipes");
+
+		ui = this.gameObject;
 		ui.SetActive(false);
 	}
 
-	
-	public void SetInventory(PlayerInventory inventory)
+
+	// "Opens" the inventory by activating it
+	public void OpenInventory(PlayerInventory inventory)
     {
 		this.inventory = inventory;
 		ui.SetActive(true);
@@ -31,6 +43,7 @@ public class InventoryUI : MonoBehaviour
     }
 
 
+	// "Closes" the inventory by de-activating it
 	public void CloseInventory()
 	{
 		ui.SetActive(false);
@@ -40,43 +53,89 @@ public class InventoryUI : MonoBehaviour
 	public void UpdateInventory()
     {
 		Item[] items = inventory.GetItems();
-		GameObject obj;
-		GameObject obj2;
+		Item[] craft_items = inventory.GetCraftItems();
+		Item ui_item;
+		GameObject ui_itemcontainer_image;
+		GameObject ui_itemcontainer_background;
+		Image background_image;
 
 		for (int i = 0; i < 10; i++)
 		{
-			obj = item_containers[i].transform.GetChild(1).gameObject;
-			obj2 = item_containers[i].transform.GetChild(0).gameObject;
+			ui_item = item_containers[i].GetComponent<Item>();
+			ui_itemcontainer_image = item_containers[i].transform.GetChild(1).gameObject;
+			ui_itemcontainer_background = item_containers[i].transform.GetChild(0).gameObject;
 			if (items[i] != null)
 			{
-				obj.SetActive(true);
-				obj2.SetActive(true);
+				ui_item.type = items[i].type;
+				
+				ui_itemcontainer_image.SetActive(true);
+				ui_itemcontainer_background.SetActive(true);
 
-				Image image = obj.GetComponent<Image>();
-				image.sprite = items[i].GetSprite();
+				background_image = ui_itemcontainer_background.GetComponent<Image>();
+				background_image.color = new Color(background_image.color.r, background_image.color.g, background_image.color.b, 0.39f);
+
+				Image image = ui_itemcontainer_image.GetComponent<Image>();
+				image.sprite = ui_item.GetSprite();
 			}
 			else
 			{
-				obj.SetActive(false);
-				obj2.SetActive(false);
+				ui_itemcontainer_image.SetActive(false);
+				ui_itemcontainer_background.SetActive(false);
+			}
+		}
+
+		Image craft_button_image = craft_button.transform.GetChild(0).gameObject.GetComponent<Image>();
+		craft_button_image.color = new Color(craft_button_image.color.r, craft_button_image.color.g, craft_button_image.color.b, 0.39f);
+		
+		Image recipe_button_image = recipe_button.transform.GetChild(0).gameObject.GetComponent<Image>();
+		recipe_button_image.color = new Color(recipe_button_image.color.r, recipe_button_image.color.g, recipe_button_image.color.b, 0.39f);
+
+		for (int i = 0; i < 4; i++)
+		{
+			ui_item = craft_containers[i].GetComponent<Item>();
+			ui_itemcontainer_image = craft_containers[i].transform.GetChild(1).gameObject;
+			ui_itemcontainer_background = craft_containers[i].transform.GetChild(0).gameObject;
+			if (craft_items[i] != null)
+			{
+				ui_item.type = craft_items[i].type;
+
+				ui_itemcontainer_image.SetActive(true);
+				ui_itemcontainer_background.SetActive(true);
+
+				background_image = ui_itemcontainer_background.GetComponent<Image>();
+				background_image.color = new Color(background_image.color.r, background_image.color.g, background_image.color.b, 0.39f);
+
+				Image image = ui_itemcontainer_image.GetComponent<Image>();
+				image.sprite = ui_item.GetSprite();
+			}
+			else
+			{
+				ui_itemcontainer_image.SetActive(false);
+				ui_itemcontainer_background.SetActive(false);
 			}
 		}
 	}
 
-
-	/*// Update is called once per frame
-	void Update()
+	
+	public GameObject[] GetCraftContainers()
     {
-		void OnMouseOver()
-		{
-			//If your mouse hovers over the GameObject with the script attached, output this message
-			Debug.Log("Mouse is over GameObject.");
-		}
+		return craft_containers;
+    }
 
-		void OnMouseExit()
-		{
-			//The mouse is no longer hovering over the GameObject so output this message each frame
-			Debug.Log("Mouse is no longer on GameObject.");
-		}
-	}*/
+
+	// "Opens" the recipe book by activating it & closes the inventory
+	public void OpenRecipes()
+	{
+		inventory.recipes_opened = true;
+		CloseInventory();
+
+		recipe_book.Open();
+	}
+
+
+	// "Closes" the recipe book by deactivating it
+	public void CloseRecipes()
+	{
+		recipe_book.Close();
+	}
 }

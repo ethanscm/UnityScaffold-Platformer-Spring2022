@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3169697355070592847
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3169697355070592845}
+  - component: {fileID: 3169697355070592844}
+  m_Layer: 0
+  m_Name: ItemAssets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3169697355070592845
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3169697355070592847}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 525.2484, y: 357.75867, z: -65.261154}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3169697355070592844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3169697355070592847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6a4a0a88aa52d04da6845ebbdcc3c8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stick_sprite: {fileID: 21300000, guid: 26a660cd425f1f74fba46f3a065bb74f, type: 3}
+  string_sprite: {fileID: 21300000, guid: 2cce3fedd29210d45b4710e0cde69365, type: 3}
+  rock_sprite: {fileID: 21300000, guid: b6cf3f4b61c334d4292451487fb53963, type: 3}
+  wood_sprite: {fileID: 21300000, guid: dce6fb2f15ed0014b8ba86d0f2c83bb2, type: 3}
+  axe_sprite: {fileID: 21300000, guid: 6d997dfe5ebd33f4d9787865726ca23c, type: 3}
+  slingshot_sprite: {fileID: 21300000, guid: 40e926c01ea118c4daca21e656c94a24, type: 3}

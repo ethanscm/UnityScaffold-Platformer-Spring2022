@@ -5,7 +5,7 @@ using UnityEngine;
 public class ItemInteraction : MonoBehaviour
 {
     private Transform detectionPoint;
-    private const float detectionRadius = 0.2f;
+    private const float detectionRadius = 0.5f;
     private LayerMask detectionLayer;
     private GameObject detectedObject;
 
@@ -30,7 +30,6 @@ public class ItemInteraction : MonoBehaviour
         {
             if(InteractInput())
             {
-                Debug.Log("INTERACT");
                 detectedObject.GetComponent<Item>().Interact();
             }
         }
@@ -40,8 +39,14 @@ public class ItemInteraction : MonoBehaviour
 		{
 			if (!inventory.inventory_opened)
 			{
-				inventoryUI.SetInventory(inventory);
+				inventoryUI.OpenInventory(inventory);
 				inventory.inventory_opened = true;
+			}
+			else if(inventory.inventory_opened && inventory.recipes_opened)
+            {
+				inventoryUI.CloseRecipes(); 
+				inventoryUI.OpenInventory(inventory);
+				inventory.recipes_opened = false;
 			}
 			else
             {
@@ -68,7 +73,6 @@ public class ItemInteraction : MonoBehaviour
         else
         {
             detectedObject = obj.gameObject;
-            Debug.Log("TRUE");
             return true;
         }
     }
@@ -76,5 +80,39 @@ public class ItemInteraction : MonoBehaviour
 	public void PickUpItem(GameObject item)
     {
 		inventory.AddItem(item);
+	}
+
+
+	public void RemoveFromInventory(int position, bool crafting)
+	{
+		if (crafting)
+			inventory.RemoveCraftingItem(position);
+		else
+			inventory.RemoveItem(position);
+		
+		inventoryUI.UpdateInventory();
+	}
+
+
+	public bool MoveCrafting(int position, int container_type)
+	{
+		if (container_type == 0)
+			return inventory.AddCraftingItem(position);
+		else if (container_type == 1 || container_type == 2)
+			inventory.ReturnCraftingItem(position);
+
+		return true;
+	}
+
+
+	public void Crafting(Item item)
+    {
+		inventory.CraftItem(item);
+		inventoryUI.UpdateInventory();
+	}
+
+	public bool hasItem(Item.ItemType item_type)
+	{
+		return inventory.FindItem(item_type);
 	}
 }

@@ -21,7 +21,7 @@ public class CharacterController2D : MonoBehaviour {
     [SerializeField] private bool m_AirControl = false;
     [SerializeField] private float m_JumpForceOnEnemies = 20;
 
-    private bool m_Grounded;
+    [SerializeField] private bool m_Grounded;
     public bool m_FacingRight = true;
     public bool m_Damaged;
     public bool m_Immune = false;
@@ -52,7 +52,6 @@ public class CharacterController2D : MonoBehaviour {
     //Handles the player movement and their jumping, called in PlayerMovement.cs
     public void Move(float move, bool jump)
     {
-
         if (m_Grounded || m_AirControl)
         {
             Vector3 targetVelocity = new Vector2(move * 10f, m_RigidBody2D.velocity.y);
@@ -79,6 +78,10 @@ public class CharacterController2D : MonoBehaviour {
         {
             m_Grounded = false;
             m_RigidBody2D.AddForce(new Vector2(m_RigidBody2D.velocity.x, m_JumpForce));
+            if (m_RigidBody2D.velocity.y < -1)
+            {
+                m_RigidBody2D.AddForce(new Vector2(0f, m_JumpForce/3));
+            }
         }
 
         //Air Jump

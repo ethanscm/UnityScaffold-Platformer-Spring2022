@@ -10,13 +10,13 @@ public class PlayerMovement : MonoBehaviour {
     
     [SerializeField] private float runSpeed;
     float horizontalMove = 0f;
-    bool jump = false;
+    bool jump;
     public CharacterController2D controller;
-    //public Animator animator;
 
     void Start()
     {
         controller = GetComponent<CharacterController2D>();
+        jump = false;
     }
 
     // Update is called once per frame
@@ -24,12 +24,10 @@ public class PlayerMovement : MonoBehaviour {
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
-        //animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
-            //animator.SetBool("IsJumping", true);
         }
     }
 

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8098385931780208805}
   - component: {fileID: 8098385931780208804}
   - component: {fileID: 8098385931780208803}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlatformBody
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8098385931780208801}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.095, y: 0.153, z: 0}
+  m_LocalScale: {x: 2.941061, y: 7.359474, z: 1}
   m_Children: []
   m_Father: {fileID: 8098385933224662931}
   m_RootOrder: 1
@@ -73,12 +73,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 59bd25d09e64609409032b42a1965d15, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.42, y: 0.42}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -118,18 +118,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.033105396, y: -0.027535575}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 0.42, y: 0.42}
+    newSize: {x: 0.42, y: 0.42}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.3315425, y: 0.045984413}
   m_EdgeRadius: 0
 --- !u!1 &8098385932126211691
 GameObject:
@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 8098385932126211693}
   - component: {fileID: 8098385932126211694}
   - component: {fileID: 8098385932126211695}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: fragilePlatformDetector
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -158,8 +158,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8098385932126211691}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0082, y: 0.552, z: 0}
-  m_LocalScale: {x: 0.91466784, y: 0.14219666, z: 1}
+  m_LocalPosition: {x: -0.0489, y: 0.1948, z: 0}
+  m_LocalScale: {x: 0.819376, y: 0.18497233, z: 1}
   m_Children: []
   m_Father: {fileID: 8098385933224662931}
   m_RootOrder: 0
@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 8098385932841503131}
   - component: {fileID: 8098385932841503130}
   - component: {fileID: 8098385932841503129}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FragilePlatform
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -327,7 +327,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
@@ -335,7 +335,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &8098385932841503129
@@ -361,7 +361,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8098385933224662931}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: platComponents
   m_TagString: Ground
   m_Icon: {fileID: 0}
