@@ -34,7 +34,7 @@ public class Item : MonoBehaviour
     
 	public void Interact()
     {
-        //Debug.Log("PICK UP");
+        Debug.Log("PICK UP");
         GameObject item = gameObject;
         FindObjectOfType<ItemInteraction>().PickUpItem(item);
         //Disable the obj

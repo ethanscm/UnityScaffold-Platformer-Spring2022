@@ -32,6 +32,7 @@ public class ItemInteraction : MonoBehaviour
         {
             if(InteractInput())
             {
+				Debug.Log("Interacted with acorn.");
                 detectedObject.GetComponent<Item>().Interact();
 				audioManager.Play("PickUp");
             }
@@ -82,6 +83,7 @@ public class ItemInteraction : MonoBehaviour
 
 	public void PickUpItem(GameObject item)
     {
+		Debug.Log("Adding item to player inventory.");
 		inventory.AddItem(item);
 	}
 

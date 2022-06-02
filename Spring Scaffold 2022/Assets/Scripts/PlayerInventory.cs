@@ -38,6 +38,7 @@ public class PlayerInventory
         {
 			if (inventory_data[i] == null)
             {
+				Debug.Log("Found a spot in cell " + i);
 				inventory_data[i] = item;
 				break;
 			}

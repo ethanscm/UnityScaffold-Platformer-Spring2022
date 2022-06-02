@@ -66,8 +66,12 @@ public class InventoryUI : MonoBehaviour
 			ui_item = item_containers[i].GetComponent<Item>();
 			ui_itemcontainer_image = item_containers[i].transform.GetChild(1).gameObject;
 			ui_itemcontainer_background = item_containers[i].transform.GetChild(0).gameObject;
+
+			Debug.Log("Item " + i + " x position: " + ui_itemcontainer_image.transform.position.x);
+
 			if (items[i] != null)
 			{
+				Debug.Log("Item " + i + " is not null. Setting item image.");
 				ui_item.type = items[i].type;
 				
 				ui_itemcontainer_image.SetActive(true);

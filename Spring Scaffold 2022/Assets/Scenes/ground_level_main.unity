@@ -6809,6 +6809,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 712916241508078435, guid: d0d05b483575ae94085a5a364fe23dda, type: 3}
+      propertyPath: m_PixelPerfect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 712916241508078436, guid: d0d05b483575ae94085a5a364fe23dda, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -11357,7 +11361,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 05b4b101e7fef444d96b8287d2659294, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0
