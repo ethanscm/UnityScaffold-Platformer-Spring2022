@@ -12,6 +12,8 @@ public class ItemInteraction : MonoBehaviour
 	[SerializeField] private InventoryUI inventoryUI;
 	private PlayerInventory inventory;
 
+	[SerializeField] private AudioManager audioManager;
+
 
 	void Start()
     {
@@ -31,6 +33,7 @@ public class ItemInteraction : MonoBehaviour
             if(InteractInput())
             {
                 detectedObject.GetComponent<Item>().Interact();
+				audioManager.Play("PickUp");
             }
         }
 

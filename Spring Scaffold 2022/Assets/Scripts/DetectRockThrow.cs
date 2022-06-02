@@ -11,6 +11,8 @@ public class DetectRockThrow : MonoBehaviour
     private bool playerIn;
     private bool thrown;
     private ItemInteraction inv;
+    [SerializeField] private AudioManager audioManager;
+    
 
     void Start()
     {
@@ -29,6 +31,8 @@ public class DetectRockThrow : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E) && inv.hasItem(Item.ItemType.Slingshot) && inv.hasItem(Item.ItemType.Rock))
             {
                 rock.SetActive(true);
+                thrown = true;
+                StartCoroutine(delayBirdCry());
             }
         }
     }
@@ -38,7 +42,7 @@ public class DetectRockThrow : MonoBehaviour
         if (other.tag == "Player")
         {
             playerIn = true;
-            if (inv.hasItem(Item.ItemType.Slingshot) && inv.hasItem(Item.ItemType.Rock))
+            if (!thrown && inv.hasItem(Item.ItemType.Slingshot) && inv.hasItem(Item.ItemType.Rock))
             {
                 indicator.SetActive(true);
             }
@@ -53,4 +57,13 @@ public class DetectRockThrow : MonoBehaviour
         }
         indicator.SetActive(false);
     }
+
+
+    IEnumerator delayBirdCry()
+    {
+        yield return new WaitForSeconds(0.5f);
+        audioManager.Play("BirdCry");
+        audioManager.Play("WingFlap");
+    }
+
 }

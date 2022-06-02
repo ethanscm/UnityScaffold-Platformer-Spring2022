@@ -13,6 +13,8 @@ public class ChopDetector : MonoBehaviour
     [SerializeField] private GameObject ctm;
     [SerializeField] private GameObject helper;
 
+    [SerializeField] private AudioManager audioManager;
+
 	void Start()
     {
         detectionPoint = gameObject.transform;
@@ -34,6 +36,7 @@ public class ChopDetector : MonoBehaviour
                     ctm.GetComponent<ChopTreeManager>().chopDownTree();
                     helper.SetActive(false);
                     chopped = true;
+                    audioManager.Play("FallTree");
                 }
             }
         }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class RockThrow : MonoBehaviour
 {
     [SerializeField] private GameObject target;
-    [SerializeField] private GameObject detector;
+    //[SerializeField] private GameObject detector;
     [SerializeField] private GameObject acorn;
 
     void Update()
@@ -14,7 +14,7 @@ public class RockThrow : MonoBehaviour
         if (transform.position.x > 33)
         {
             target.SetActive(false);
-            detector.SetActive(false);
+            //detector.SetActive(false);
             acorn.SetActive(true);
             gameObject.SetActive(false);
         }
