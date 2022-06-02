@@ -4571,6 +4571,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 132497fee7dbf3047ac3461b0c94abe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item_containers:
+  - {fileID: 712916240063573830}
+  - {fileID: 712916240386560842}
+  - {fileID: 712916240858038253}
+  - {fileID: 712916241072355107}
+  - {fileID: 712916240712522805}
+  - {fileID: 712916241798476056}
+  - {fileID: 712916240596855121}
+  - {fileID: 712916240739005748}
+  - {fileID: 712916241331435347}
+  - {fileID: 712916240193599404}
+  craft_containers:
+  - {fileID: 712916241668653132}
+  - {fileID: 712916240753143981}
+  - {fileID: 712916240499317099}
+  - {fileID: 712916241161095932}
   recipe_book: {fileID: 712916240820330613}
   audioManager: {fileID: 0}
 --- !u!1 &712916241577371266

@@ -11,10 +11,10 @@ public class InventoryUI : MonoBehaviour
 	private GameObject ui;
 
 	// an array containing all the item slots of the inventory's ui
-	private GameObject[] item_containers;
+	public GameObject[] item_containers;
 
 	// an array containing all the crafting slots of the inventory's ui
-	private GameObject[] craft_containers;
+	public GameObject[] craft_containers;
 	private GameObject craft_button;
 	
 	private GameObject recipe_button;
@@ -25,9 +25,8 @@ public class InventoryUI : MonoBehaviour
 
 	private void Awake()
     {
-		item_containers = GameObject.FindGameObjectsWithTag("ItemContainer");
-		
-		craft_containers = GameObject.FindGameObjectsWithTag("CraftContainer");
+		//item_containers = GameObject.FindGameObjectsWithTag("ItemContainer");
+		//craft_containers = GameObject.FindGameObjectsWithTag("CraftContainer");
 		craft_button = GameObject.Find("CraftButton");
 		recipe_button = GameObject.Find("Recipes");
 
@@ -71,7 +70,6 @@ public class InventoryUI : MonoBehaviour
 
 			if (items[i] != null)
 			{
-				Debug.Log("Item " + i + " is not null. Setting item image.");
 				ui_item.type = items[i].type;
 				
 				ui_itemcontainer_image.SetActive(true);
