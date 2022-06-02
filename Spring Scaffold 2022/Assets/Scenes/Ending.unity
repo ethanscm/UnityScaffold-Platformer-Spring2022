@@ -446,8 +446,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 977713349}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.2556, y: 2.3611, z: 0}
-  m_LocalScale: {x: 2.4408205, y: 2.0722315, z: 1}
+  m_LocalPosition: {x: 4.008, y: 1.888, z: 0}
+  m_LocalScale: {x: 1.5578637, y: 1.3531705, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -528,7 +528,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 984509083}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.179, y: 2.4868, z: 0}
+  m_LocalPosition: {x: 2.831, y: 2.332, z: 0}
   m_LocalScale: {x: 3.0416899, y: 3.007157, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -545,7 +545,7 @@ GameObject:
   - component: {fileID: 1123472463}
   - component: {fileID: 1123472462}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Terminator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -653,8 +653,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2046420351}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.0827, y: -2.8005, z: 0}
-  m_LocalScale: {x: 16.522629, y: 15.211593, z: 1}
+  m_LocalPosition: {x: 4.29, y: -3.81, z: 0}
+  m_LocalScale: {x: 5.3124633, y: 4.175288, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2

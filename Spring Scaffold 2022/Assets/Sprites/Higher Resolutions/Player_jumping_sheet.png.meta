@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: 4dfde9ea891b0ac4c86842c5899dc356
+guid: 044e535afdfa21a44a900b8c3bccfabb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8288945894067101568
-    second: Player_idle_sheet_0
+      213: -8813173737866050469
+    second: Player_jumping_sheet_0
   - first:
-      213: -6857258534231460232
-    second: Player_idle_sheet_1
+      213: 3477860279790706361
+    second: Player_jumping_sheet_1
   - first:
-      213: 4560898949839511863
-    second: Player_idle_sheet_2
+      213: 4944961495062397722
+    second: Player_jumping_sheet_2
   - first:
-      213: 6272916380236916149
-    second: Player_idle_sheet_3
+      213: -6081571317281347791
+    second: Player_jumping_sheet_3
   - first:
-      213: 4267785665157152514
-    second: Player_idle_sheet_4
+      213: 6140264600637504287
+    second: Player_jumping_sheet_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -106,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_idle_sheet_0
+      name: Player_jumping_sheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 12
+        y: 2
+        width: 46
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,20 +120,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08f5d4abf50480370800000000000000
-      internalID: 8288945894067101568
+      spriteID: b5441bafd2151b580800000000000000
+      internalID: -8813173737866050469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_idle_sheet_1
+      name: Player_jumping_sheet_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
+        x: 68
+        y: 10
+        width: 54
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,20 +141,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8763e16c1bf16d0a0800000000000000
-      internalID: -6857258534231460232
+      spriteID: 9be9d5b7f77d34030800000000000000
+      internalID: 3477860279790706361
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_idle_sheet_2
+      name: Player_jumping_sheet_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
+        x: 136
+        y: 16
+        width: 54
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,20 +162,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 731e2a12e619b4f30800000000000000
-      internalID: 4560898949839511863
+      spriteID: a13cd2db74800a440800000000000000
+      internalID: 4944961495062397722
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_idle_sheet_3
+      name: Player_jumping_sheet_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
+        x: 200
+        y: 12
+        width: 54
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,20 +183,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b520c56630ed0750800000000000000
-      internalID: 6272916380236916149
+      spriteID: 137ad35cb1be99ba0800000000000000
+      internalID: -6081571317281347791
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_idle_sheet_4
+      name: Player_jumping_sheet_4
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
+        x: 266
+        y: 8
+        width: 46
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,8 +204,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20f323563783a3b30800000000000000
-      internalID: 4267785665157152514
+      spriteID: f1b77eb2f1a963550800000000000000
+      internalID: 6140264600637504287
       vertices: []
       indices: 
       edges: []

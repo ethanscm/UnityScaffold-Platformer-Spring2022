@@ -4853,6 +4853,22 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1827974088080324233, guid: 1cb85b372251be4458ca58b6966bf022, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2465068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827974088080324233, guid: 1cb85b372251be4458ca58b6966bf022, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5194671
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827974088080324233, guid: 1cb85b372251be4458ca58b6966bf022, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.09936901
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827974088080324233, guid: 1cb85b372251be4458ca58b6966bf022, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.003762752
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827974088080324233, guid: 1cb85b372251be4458ca58b6966bf022, type: 3}
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
@@ -4867,6 +4883,14 @@ PrefabInstance:
     - target: {fileID: 1827974088080324236, guid: 1cb85b372251be4458ca58b6966bf022, type: 3}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827974088080324236, guid: 1cb85b372251be4458ca58b6966bf022, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.748955
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827974088080324236, guid: 1cb85b372251be4458ca58b6966bf022, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.578335
       objectReference: {fileID: 0}
     - target: {fileID: 1827974088080324236, guid: 1cb85b372251be4458ca58b6966bf022, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4926,11 +4950,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1827974089555405653, guid: 1cb85b372251be4458ca58b6966bf022, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0469
+      value: 0.046
       objectReference: {fileID: 0}
     - target: {fileID: 1827974089555405653, guid: 1cb85b372251be4458ca58b6966bf022, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1582
+      value: -0.424
       objectReference: {fileID: 0}
     - target: {fileID: 4906930897109296382, guid: 1cb85b372251be4458ca58b6966bf022, type: 3}
       propertyPath: ctm
@@ -9699,9 +9723,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0053935098, y: 0.042192735}
+  m_Offset: {x: 0.05434646, y: 0.1387761}
   serializedVersion: 2
-  m_Radius: 0.03509686
+  m_Radius: 0.08173398
 --- !u!1 &1188867743
 GameObject:
   m_ObjectHideFlags: 0
