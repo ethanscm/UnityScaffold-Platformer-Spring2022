@@ -57,7 +57,7 @@ public class ChopDetector : MonoBehaviour
         else
         {
             detectedObject = obj.gameObject;
-            if (!chopped)//inv.hasItem(Item.ItemType.Axe))
+            if (!chopped && inv.hasItem(Item.ItemType.Axe))
             {
                 helper.SetActive(true);
             }

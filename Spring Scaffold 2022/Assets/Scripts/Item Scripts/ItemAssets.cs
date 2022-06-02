@@ -12,6 +12,7 @@ public class ItemAssets : MonoBehaviour
     }
 
 	// Materials
+	public Sprite sap_sprite;
 	public Sprite stick_sprite;
 	public Sprite string_sprite;
 	public Sprite rock_sprite;
@@ -19,5 +20,7 @@ public class ItemAssets : MonoBehaviour
 	
 	// Crafted Items
 	public Sprite axe_sprite;
+	public Sprite glue_sprite;
+	public Sprite ladder_sprite;
 	public Sprite slingshot_sprite;
 }

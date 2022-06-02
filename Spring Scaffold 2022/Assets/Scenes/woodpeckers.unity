@@ -4941,7 +4941,6 @@ MonoBehaviour:
   points:
   - {fileID: 1905224777}
   - {fileID: 2029496538}
-  nextID: 0
   speed: 2
 --- !u!61 &658576000
 BoxCollider2D:

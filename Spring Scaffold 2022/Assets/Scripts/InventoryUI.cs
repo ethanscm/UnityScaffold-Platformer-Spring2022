@@ -20,6 +20,8 @@ public class InventoryUI : MonoBehaviour
 	private GameObject recipe_button;
 	[SerializeField] private RecipeBook recipe_book;
 
+	[SerializeField] private InventoryAudioManager audioManager;
+
 
 	private void Awake()
     {
@@ -130,6 +132,7 @@ public class InventoryUI : MonoBehaviour
 		CloseInventory();
 
 		recipe_book.Open();
+		audioManager.Play("OpenRecipes");
 	}
 
 
@@ -137,5 +140,6 @@ public class InventoryUI : MonoBehaviour
 	public void CloseRecipes()
 	{
 		recipe_book.Close();
+		audioManager.Play("OpenRecipes");
 	}
 }

@@ -19,6 +19,10 @@ public class FallingSpike : MonoBehaviour
         {
             rb.isKinematic = false;
         }
+        if (col.gameObject.name.Equals ("SpikeDestroy"))
+        {
+            StartCoroutine(waitToDestroy());
+        }
     }
     
     void OnCollisionEnter2D (Collision2D col)
@@ -28,5 +32,11 @@ public class FallingSpike : MonoBehaviour
             Debug.Log("RESPAWN!");
             gameManager.GameOver(delay);
         }
+    }
+
+    IEnumerator waitToDestroy()
+    {
+        yield return new WaitForSeconds(2f);
+        gameObject.SetActive(false);
     }
 }

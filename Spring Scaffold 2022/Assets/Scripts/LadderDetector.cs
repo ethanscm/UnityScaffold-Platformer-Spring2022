@@ -14,6 +14,7 @@ public class LadderDetector : MonoBehaviour
     [SerializeField] private GameObject ladder;
     [SerializeField] private GameObject helper;
     [SerializeField] private GameObject detector;
+    private ItemInteraction inv;
 
 	void Start()
     {
@@ -22,6 +23,7 @@ public class LadderDetector : MonoBehaviour
         helper.SetActive(false);
         ladder.SetActive(false);
         built = false;
+        inv = gameObject.GetComponent<ItemInteraction>();
 	}
 
     void Update()
@@ -29,7 +31,7 @@ public class LadderDetector : MonoBehaviour
         // Interact with tree using "e"
 		if(DetectObject())
         {
-            if(InteractInput())
+            if(InteractInput() && inv.hasItem(Item.ItemType.Ladder))
             {
                 helper.SetActive(false);
                 ladder.SetActive(true);
@@ -61,7 +63,7 @@ public class LadderDetector : MonoBehaviour
         else
         {
             detectedObject = obj.gameObject;
-            if (!built)
+            if (inv.hasItem(Item.ItemType.Ladder) && !built)
             {
                 helper.SetActive(true);
             }
