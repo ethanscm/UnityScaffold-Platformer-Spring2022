@@ -603,6 +603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 712916241574615423}
+  audioManager: {fileID: 0}
   container_type: 0
   inventory_position: 1
 --- !u!114 &712916240063573833
@@ -987,6 +988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 712916241574615423}
+  audioManager: {fileID: 0}
   container_type: 0
   inventory_position: 10
 --- !u!114 &712916240193599406
@@ -1220,6 +1222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrow_type: -1
   recipe_book: {fileID: 712916240820330613}
+  audioManager: {fileID: 0}
 --- !u!1 &712916240293863287
 GameObject:
   m_ObjectHideFlags: 0
@@ -1666,6 +1669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 712916241574615423}
+  audioManager: {fileID: 0}
   container_type: 0
   inventory_position: 2
 --- !u!114 &712916240386560844
@@ -1825,6 +1829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 712916241574615423}
+  audioManager: {fileID: 0}
   container_type: 1
   inventory_position: 3
 --- !u!114 &712916240499317101
@@ -2043,6 +2048,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 712916241574615423}
+  audioManager: {fileID: 0}
   container_type: 0
   inventory_position: 7
 --- !u!114 &712916240596855123
@@ -2468,6 +2474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 712916241574615423}
+  audioManager: {fileID: 0}
   container_type: 0
   inventory_position: 5
 --- !u!114 &712916240712522807
@@ -2611,6 +2618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 712916241574615423}
+  audioManager: {fileID: 0}
   container_type: 0
   inventory_position: 8
 --- !u!114 &712916240739005750
@@ -2679,6 +2687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 712916241574615423}
+  audioManager: {fileID: 0}
   container_type: 1
   inventory_position: 2
 --- !u!114 &712916240753143983
@@ -2875,6 +2884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 712916241574615423}
+  audioManager: {fileID: 0}
   container_type: 0
   inventory_position: 3
 --- !u!114 &712916240858038255
@@ -3017,6 +3027,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrow_type: 1
   recipe_book: {fileID: 712916240820330613}
+  audioManager: {fileID: 0}
 --- !u!1 &712916240993913937
 GameObject:
   m_ObjectHideFlags: 0
@@ -3311,6 +3322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 712916241574615423}
+  audioManager: {fileID: 0}
   container_type: 0
   inventory_position: 4
 --- !u!114 &712916241072355109
@@ -3360,8 +3372,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -260.4, y: 130.9}
-  m_SizeDelta: {x: 80, y: 60}
+  m_AnchoredPosition: {x: -262.2, y: 134.5}
+  m_SizeDelta: {x: 42, y: 56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &712916241115425467
 CanvasRenderer:
@@ -3391,7 +3403,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 50bfa8a78734abc4e904aedf4f7cfe17, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0859d8f723b28b04d9ad667b0b9a5ef9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3679,6 +3691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 712916241574615423}
+  audioManager: {fileID: 0}
   container_type: 2
   inventory_position: 4
 --- !u!114 &712916241161095934
@@ -4063,6 +4076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 712916241574615423}
+  audioManager: {fileID: 0}
   container_type: 0
   inventory_position: 9
 --- !u!114 &712916241331435349
@@ -4387,6 +4401,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 712916241574615423}
+  audioManager: {fileID: 0}
   container_type: -1
   inventory_position: 0
 --- !u!114 &712916241476108089
@@ -4555,6 +4570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recipe_book: {fileID: 712916240820330613}
+  audioManager: {fileID: 0}
 --- !u!1 &712916241577371266
 GameObject:
   m_ObjectHideFlags: 0
@@ -5222,6 +5238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 712916241574615423}
+  audioManager: {fileID: 0}
   container_type: -2
   inventory_position: 0
 --- !u!114 &712916241656125268
@@ -5289,6 +5306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 712916241574615423}
+  audioManager: {fileID: 0}
   container_type: 1
   inventory_position: 1
 --- !u!114 &712916241668653134
@@ -5393,6 +5411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 712916241574615423}
+  audioManager: {fileID: 0}
   container_type: 0
   inventory_position: 6
 --- !u!114 &712916241798476058
